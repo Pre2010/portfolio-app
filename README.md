@@ -12,6 +12,36 @@ Kick off your project with this default boilerplate. This starter ships with the
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
 
+## How to update your Hero
+
+    Go into the 'content' folder -> 'hero' folder
+    Update the Markdown file to your info and an image or remove the image if you don't want one.
+
+## How to update your About
+
+    Go into the 'content' folder -> 'about' folder
+    Update the Markdown file to your info and what you would like to put in there.
+    And an image or remove the image if you don't want one.
+
+## How to update your Work Experience
+
+    Go into the 'content' folder -> 'work' folder
+    Update the Markdown file to your job info.
+    If you need to add another job, add another Markdown file or copy paste one of the Markdown files in the folder and use it as a template.
+
+## How to update your Contact
+
+    Go into the 'content' folder -> 'contact' folder
+    Update the Markdown file to what you'd like to put in there.
+
+
+## How to add projects
+
+    Go into the 'content' folder -> 'projects' folder.
+    Create a Markdown file for each project and fill in the fields with the information about the project.
+    And an image or remove the image if you don't want one.
+
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
