@@ -1,14 +1,10 @@
 ---
-title: "About Me"
-
+title: 'About Me'
 professionalImage: './images/coding.svg'
-professionalDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
-
+professionalDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
 personalImage: './images/support-team.svg'
-personalDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco'
-
-techDescription: 'Technologies I've worked with so far:'
-
+personalDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+techDescription: "Technologies I've worked with so far:"
 tech:
     - Gatsby.js
     - React
@@ -16,5 +12,5 @@ tech:
     - CSS
     - SCSS
     - Javascript
-    - Other languages/db's/etc
+    - Other languages/dbs/etc
 ---

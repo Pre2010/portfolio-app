@@ -27,7 +27,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     Go into the 'content' folder -> 'work' folder
     Update the Markdown file to your job info.
-    If you need to add another job, add another Markdown file or copy paste one of the Markdown files in the folder and use it as a template.
+    If you need to add another job, add another Markdown file or copy/paste one of the Markdown files in the folder and use it as a template.
 
 ## How to update your Contact
 
@@ -38,8 +38,20 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 ## How to add projects
 
     Go into the 'content' folder -> 'projects' folder.
-    Create a Markdown file for each project and fill in the fields with the information about the project.
+    Update the Markdown file for the project and fill in the fields with the information about the project.
     And an image or remove the image if you don't want one.
+    If you need to add another project, add another Markdown file or copy/paste one of the Markdown files in the folder and use it as a template.
+
+## How to update the styling
+
+    Go into 'styles' folder -> theme.js.
+    Update the variables in there to what you would like.
+
+## How to add your resume
+
+    Go into 'content' folder -> 'resume' folder.
+    Add a .pdf or .doc file of your resume in there and get rid of the example image in there.
+    Go into the '' file, go down to the HeaderResumeButton component, and update the link to point to your resume.
 
 
 ## 🚀 Quick start

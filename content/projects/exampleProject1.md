@@ -1,11 +1,11 @@
 ---
-title: "Example Project"
+title: "Example Project 1"
 github: ''
 livePreviewUrl: ''
-imagePath: './images/example_project.jpg'
+imagePath: './images/example_project1.jpg'
 description: "Description"
 tech:
-  - Gatsby.js
-  - React Hooks
+  - React
+  - React Redux
   - Other Frameworks/Langauges/DB's/etc
 ---

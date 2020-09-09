@@ -4,9 +4,32 @@ module.exports = {
     siteKeywords: '',
     siteUrl: '',
     email: '',
-    github: '',
-    linkedIn: '',
-    
-
-
+    socialMedia: [
+        {
+            name: 'github',
+            url: ''
+        },
+        {
+            name: 'linkedIn',
+            url: ''
+        }
+    ],
+    navLinks: [
+        {
+            name: 'About',
+            url: '/about'
+        },
+        {
+            name: 'Work',
+            url: '/work'
+        },
+        {
+            name: 'Projects',
+            url: '/projects'
+        },
+        {
+            name: 'Contact',
+            url: '/contact'
+        },
+    ],
 }

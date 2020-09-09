@@ -1,42 +1,47 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import {
+  HeaderLogo,
+  HeaderLogoContainer,
+  HeaderNavContainer,
+  HeaderNavLinksContainer,
+  HeaderNavLinkList,
+  HeaderNavLinkListItem,
+  HeaderNavLink,
+  HeaderResumeButton,
+  HeaderSocialMediaAndResumeContainer,
+} from '../styles/components/header.style';
+import {navLinks} from '../config';
+import SocialMedia from "./image_components/socialMedia";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+const Header = () => (
+  <header>
+    <HeaderNavContainer>
+      <HeaderLogoContainer>
+        <Link to='/'>
+          <HeaderLogo />
         </Link>
-      </h1>
-    </div>
+      </HeaderLogoContainer>
+      <HeaderNavLinksContainer>
+        <HeaderNavLinkList>
+          {
+            navLinks.map(({url, name}, i) => (
+              <HeaderNavLinkListItem key={i}>
+                <HeaderNavLink to={url}>{name}</HeaderNavLink>
+              </HeaderNavLinkListItem>
+            ))
+          }
+        </HeaderNavLinkList>
+      </HeaderNavLinksContainer>
+      <HeaderSocialMediaAndResumeContainer>
+        <SocialMedia />
+        <HeaderResumeButton 
+        href='./resume.jpg'
+        target='_blank'
+        rel='nofollow noopener noreferrer'>Resume</HeaderResumeButton>
+      </HeaderSocialMediaAndResumeContainer>
+    </HeaderNavContainer>
   </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
+);
 
 export default Header
