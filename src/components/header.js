@@ -1,8 +1,6 @@
-import { Link } from "gatsby"
 import React from "react"
 import {
   HeaderLogo,
-  HeaderLogoContainer,
   HeaderNavContainer,
   HeaderNavLinksContainer,
   HeaderNavLinkList,
@@ -17,11 +15,7 @@ import SocialMedia from "./image_components/socialMedia";
 const Header = () => (
   <header>
     <HeaderNavContainer>
-      <HeaderLogoContainer>
-        <Link to='/'>
-          <HeaderLogo />
-        </Link>
-      </HeaderLogoContainer>
+      <HeaderLogo />
       <HeaderNavLinksContainer>
         <HeaderNavLinkList>
           {

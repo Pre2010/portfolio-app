@@ -16,13 +16,17 @@ export const SocialMediaList = styled.ul`
 
 export const SocialMediaLink = styled(Link)`
     padding: 10px;
-
-    &:hover {
-
-    }
+    vertical-align: middle;
+    transition: 0.3s ease;
 
     svg {
         height: 45px;
         width: 45px;
+    }
+
+    &:hover {
+        path {
+            opacity: 0.7;
+        }
     }
 `;

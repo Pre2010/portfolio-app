@@ -1,11 +1,9 @@
 import React from 'react';
 import {
     FooterContainer,
-    FooterLogoContainer,
     FooterLogo,
     FooterInfoContainer,
     FooterInfo,
-    FooterLogoLink,
     FooterSocialMediaContainer
 } from '../styles/components/footer.style';
 import SocialMedia from './image_components/socialMedia';
@@ -13,11 +11,7 @@ import SocialMedia from './image_components/socialMedia';
 const Footer = () => {
     return (
         <FooterContainer>
-            <FooterLogoContainer>
-                <FooterLogoLink to='/' >
-                    <FooterLogo />
-                </FooterLogoLink>
-            </FooterLogoContainer>
+            <FooterLogo />
             <FooterInfoContainer>
                 <FooterInfo>
                     Designed and developed by Preyesh Patel

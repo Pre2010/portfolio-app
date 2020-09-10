@@ -53,7 +53,15 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     Add a .pdf or .doc file of your resume in there and get rid of the example image in there.
     Go into the '' file, go down to the HeaderResumeButton component, and update the link to point to your resume.
 
+## How to add your social media accounts
 
+    Go into config.js file and go to socialMedia array.
+    Enter your social media name and url using a lowercase convention for the name.
+    Next add your social media icons, in .svg or .js format, to 'src' folder -> 'images' folder -> 'social_media_icons' folder.
+    Convert the .js if it isn't already, turn the image into a funcitonal component.
+    Next go to 'components' -> socialMediaImage.js.
+    Add your social media icon component to the switch case statement.
+    
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
