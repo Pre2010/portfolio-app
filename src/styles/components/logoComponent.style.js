@@ -6,6 +6,7 @@ const {colors, margin_left_right} = theme;
 
 export const LogoContainer = styled.div`
     margin: 0 ${margin_left_right}px;
+    margin-top: 5px;
     svg {
         fill: none;
     }

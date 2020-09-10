@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import theme from '../theme';
 import Logo from '../../components/image_components/logoComponent';
 
-const {colors, margin_left_right} = theme;
+const {margin_left_right} = theme;
 
 export const FooterContainer = styled.div`
     width: 100%;

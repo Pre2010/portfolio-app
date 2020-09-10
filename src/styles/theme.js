@@ -9,7 +9,6 @@ const theme = {
         hoverColor: '#365477'
     },
     margin_left_right: 10,
-
 };
 
 export default theme;

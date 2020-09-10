@@ -17,7 +17,6 @@ export const SocialMediaList = styled.ul`
 export const SocialMediaLink = styled(Link)`
     padding: 10px;
     vertical-align: middle;
-    transition: 0.3s ease;
 
     svg {
         height: 45px;

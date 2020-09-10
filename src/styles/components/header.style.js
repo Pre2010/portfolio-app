@@ -40,7 +40,7 @@ export const HeaderNavLink = styled(Link)`
     padding: 0 5px;
     color: ${colors.textColor};
     text-decoration: none;
-    transition: color 0.4s ease;
+    transition: color 0.5s ease;
 
     &:hover {
         color: ${colors.borderColor};
@@ -68,6 +68,7 @@ export const HeaderResumeButton = styled.a`
 
     &:hover {
         background-color: ${colors.hoverColor};
+        color: ${colors.borderColor};
     }
 `;
 
