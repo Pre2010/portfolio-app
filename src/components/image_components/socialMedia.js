@@ -12,7 +12,7 @@ const SocialMedia = () => (
         <SocialMediaList>
             {
                 socialMedia.map(({url, name}, i) => (
-                    <SocialMediaLink to={url}>
+                    <SocialMediaLink key={i} to={url}>
                         <SocialMediaImage name={name} />
                     </SocialMediaLink>
                 ))

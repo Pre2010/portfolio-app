@@ -8,6 +8,7 @@ export const FooterContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 25px;
 
     // TODO media query for screens less than x px. if so, set flex direction to column
 `;

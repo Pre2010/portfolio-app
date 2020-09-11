@@ -32,7 +32,6 @@ export const HeaderNavLinkList = styled.ol`
 
 export const HeaderNavLinkListItem = styled.li`
     padding: 0 15px;
-    color: ${colors.textColor};
 `;
 
 export const HeaderNavLink = styled(Link)`
@@ -65,6 +64,7 @@ export const HeaderResumeButton = styled.a`
     border-radius: 10px;
     vertical-align: middle;
     transition: 0.5s ease;
+    cursor: pointer;
 
     &:hover {
         background-color: ${colors.hoverColor};

@@ -3,22 +3,30 @@ import {
     HeroContainer,
     HeroDescriptionContainer,
     HeroDescription,
+    HeroDescriptionName,
     HeroImageContainer,
     HeroImage
 } from '../../styles/sections/heroSection.style';
 
-const Hero = () => {
+const Hero = ({data}) => {
+    const heroData = data[0].node;
+    const {frontmatter} = heroData;
     return (
         <HeroContainer>
             <HeroImageContainer>
-                <HeroImage />
+                <HeroImage src={frontmatter.image.publicURL} alt='hero' />
             </HeroImageContainer>
+            
             <HeroDescriptionContainer>
                 <HeroDescription>
-                    Hi! I’m NAME, a JOB_TITLE.
+                    {frontmatter.heroIntroduction} 
+                    <HeroDescriptionName>{frontmatter.heroName}</HeroDescriptionName>
                 </HeroDescription>
                 <HeroDescription>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    {frontmatter.heroSubtitle}
+                </HeroDescription>
+                <HeroDescription>
+                    {frontmatter.heroDescription}
                 </HeroDescription>
             </HeroDescriptionContainer>
         </HeroContainer>

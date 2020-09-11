@@ -17,16 +17,25 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: ${colors.titleColor};
         text-decoration: underline;
+        font-size: 50px;
+        margin-bottom: 2%;
     }
 
     p {
         color: ${colors.textColor};
-        font-size: 17px;
+        font-size: 20px;
     }
 
     svg {
         vertical-align: middle;
+    }
+
+    li {
+        color: ${colors.textColor};
     }
 `;
