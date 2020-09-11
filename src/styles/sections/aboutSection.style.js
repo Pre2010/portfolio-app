@@ -16,7 +16,7 @@ export const AboutTitle = styled.h1``;
 
 export const AboutImageAndDescriptionContainer = styled.div`
     display: flex;
-    margin: 0 5%;
+    margin: 0 15%;
     border-bottom: 2px solid ${colors.borderColor};
 `;
 

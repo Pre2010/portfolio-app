@@ -4,11 +4,13 @@ import Layout from "../components/layout";
 import Hero from "../components/sections/heroSection";
 import Contact from "../components/sections/contactSection";
 import About from "../components/sections/aboutSection";
+import Projects from "../components/sections/projectsSection";
 
 const IndexPage = ({data}) => (
   <Layout>
     <Hero data={data.hero.edges} />
     <About data={data.about.edges} />
+    <Projects data={data.projects.edges} />
     <Contact data={data.contact.edges} />
   </Layout>
 );
@@ -35,7 +37,7 @@ export const query = graphql`
         }
       }
     },
-      about: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/about/"}}) {
+    about: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/about/"}}) {
       edges {
         node {
           id
@@ -55,6 +57,23 @@ export const query = graphql`
         }
       }
     },
+    projects: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/projects/"}}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            github
+            livePreviewUrl
+            imagePath {
+              publicURL
+            }
+            description
+            techs
+          }
+        }
+      }
+    }
     contact: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/contact/"}}) {
       edges {
         node {
