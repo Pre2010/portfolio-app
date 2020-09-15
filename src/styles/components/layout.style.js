@@ -26,6 +26,13 @@ export const GlobalStyle = createGlobalStyle`
         margin-bottom: 2%;
     }
 
+    h2, h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: ${colors.titleColor};
+    }
+
     p {
         color: ${colors.textColor};
         font-size: 20px;

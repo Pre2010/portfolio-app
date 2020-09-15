@@ -3,7 +3,11 @@ import theme from '../theme';
 
 const {colors} = theme;
 
-export const ProjectsContainer = styled.div`
+export const ProjectsContainer = styled.div``;
+
+export const ProjectTitle = styled.h1``;
+
+export const ProjectContainer = styled.div`
     display: flex;
     padding-bottom: 2%;
     margin: 0 10% 2% 10%;
@@ -11,32 +15,31 @@ export const ProjectsContainer = styled.div`
     
 `;
 
-export const ProjectsTitle = styled.h1``;
-
-export const ProjectsImageAndButtonsContainer = styled.div`
-    width: 30%;
+export const ProjectImageAndButtonsContainer = styled.div`
+    width: 40%;
     margin-left: 10%;
+    max-width: 400px;
 `;
 
-export const ProjectsImageContainer = styled.div`
+export const ProjectImageContainer = styled.div`
     display: flex;
     height: 18rem;
     width: 20%;
     
 `;
 
-export const ProjectsImage = styled.img`
+export const ProjectImage = styled.img`
     src: url(${props => props.src});
     max-width: 400px;
 `;
 
-export const ProjectsButtonsContainer = styled.div`
+export const ProjectButtonsContainer = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-top: 5%;
 `;
 
-export const ProjectsButton = styled.a`
+export const ProjectButton = styled.a`
     text-decoration: none;
     color: ${colors.textColor};
     padding: 0 8px;
@@ -51,7 +54,7 @@ export const ProjectsButton = styled.a`
     }
 `;
 
-export const ProjectsDescriptionContainer = styled.div`
+export const ProjectDescriptionContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,23 +63,29 @@ export const ProjectsDescriptionContainer = styled.div`
     margin-left: 15%;
 `;
 
-export const ProjectsDescription = styled.p``;
-
-export const ProjectsTechContainer = styled.div``;
-
-export const ProjectsTechList = styled.ul`
-    display: grid;
-    grid-template-columns: repeat(3, minmax(10%, 25%));
-    grid-gap: 10px;
-    justify-content: center;
+export const ProjectTitleDescription = styled.h2`
+    color: ${colors.titleColor};
+    margin: 0;
 `;
 
-export const ProjectsTechItem = styled.li`
+export const ProjectDescription = styled.p``;
+
+export const ProjectTechContainer = styled.div``;
+
+export const ProjectTechList = styled.ul`
+    display: grid;
+    grid-template-columns: repeat(3, minmax(40%, 45%));
+    grid-gap: 15px;
+    justify-content: space-between;
+    padding-left: 0;
+`;
+
+export const ProjectTechItem = styled.li`
     list-style: none;
 
     &:before {
         content: ">>";
         padding-right: 5px;
-        color: ${colors.titleColor};
+        color: ${colors.borderColor};
     }
 `;

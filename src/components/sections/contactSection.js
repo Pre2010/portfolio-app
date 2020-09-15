@@ -19,7 +19,7 @@ const Contact = ({data}) => {
     const {frontmatter} = contactData;
 
     return (
-        <ContactContainer>
+        <ContactContainer id='contact'>
             <ContactTitleContainer>
                 <ContactTitle>Contact Me</ContactTitle>
             </ContactTitleContainer>

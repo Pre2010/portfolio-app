@@ -7,5 +7,5 @@ description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ei
 techs:
   - React
   - React Redux
-  - Other Frameworks/Langauges/DB's/etc
+  - Other 
 ---

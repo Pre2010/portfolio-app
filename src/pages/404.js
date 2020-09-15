@@ -1,17 +1,28 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import {
-  // Image404Container,
-  // Image404
+  div404Container,
+  Image404Container,
+  Image404,
+  Description404Container,
+  Title404,
+  Description404
 } from '../styles/pages/404.style';
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <div404Container>
+      <Image404Container>
+        <Image404 />
+      </Image404Container>
+      <Description404Container>
+        <Title404>Page Not Found</Title404>
+        <Description404>
+          This page doesn't exist.
+        </Description404>
+      </Description404Container>
+    </div404Container>
   </Layout>
 )
 

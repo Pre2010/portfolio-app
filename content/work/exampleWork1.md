@@ -1,8 +1,16 @@
 ---
 title: 'Example Job Title'
-company: 'Example Company'
+company: 'Example Company 2'
 startDate: '2016'
 endDate: '2017'
-description: 'Description'
-technology: 'Technologies used'
+jobDescription: 
+    - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+technology: 
+    - Gatsby.js
+    - GraphQL
+    - Other
 ---

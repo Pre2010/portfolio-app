@@ -1,78 +1,80 @@
 import React from 'react';
 import {
     ProjectsContainer,
-    ProjectsTitle,
-    ProjectsImageAndButtonsContainer,
-    ProjectsImageContainer,
-    ProjectsImage,
-    ProjectsButtonsContainer,
-    ProjectsButton,
-    ProjectsDescriptionContainer,
-    ProjectsDescription,
-    ProjectsTechContainer,
-    ProjectsTechList,
-    ProjectsTechItem
+    ProjectContainer,
+    ProjectTitle,
+    ProjectImageAndButtonsContainer,
+    ProjectImageContainer,
+    ProjectImage,
+    ProjectButtonsContainer,
+    ProjectButton,
+    ProjectDescriptionContainer,
+    ProjectTitleDescription,
+    ProjectDescription,
+    ProjectTechContainer,
+    ProjectTechList,
+    ProjectTechItem
 }
 from '../../styles/sections/projectsSection.style';
 
 const Projects = ({data}) => {
     return (
-        <>
-            <ProjectsTitle>
+        <ProjectsContainer>
+            <ProjectTitle id='projects'>
                 Projects
-            </ProjectsTitle>
+            </ProjectTitle>
             {
                 data.length > 0 ?
-                    data.map((project, i) => (
-                        <ProjectsContainer key={i}>
-                            <ProjectsImageAndButtonsContainer>
-                                <ProjectsImageContainer>
-                                    <ProjectsImage src={project.node.frontmatter.imagePath.publicURL} />
-                                </ProjectsImageContainer>
-                                <ProjectsButtonsContainer>
-                                    <ProjectsButton 
+                    data.map((project) => (
+                        <ProjectContainer key={project.node.id}>
+                            <ProjectImageAndButtonsContainer>
+                                <ProjectImageContainer>
+                                    <ProjectImage src={project.node.frontmatter.imagePath.publicURL} />
+                                </ProjectImageContainer>
+                                <ProjectButtonsContainer>
+                                    <ProjectButton 
                                         href={project.node.frontmatter.github}
                                         target="_blank"
                                         rel="nofollow noopener noreferrer"
-                                        >Repo</ProjectsButton>
-                                    <ProjectsButton
+                                        >Repo</ProjectButton>
+                                    <ProjectButton
                                         href={project.node.frontmatter.livePreviewUrl}
                                         target="_blank"
                                         rel="nofollow noopener noreferrer"
-                                        >Live Preview</ProjectsButton>
-                                </ProjectsButtonsContainer>
-                            </ProjectsImageAndButtonsContainer>
-                            <ProjectsDescriptionContainer>
-                                <ProjectsDescription>
+                                        >Live Preview</ProjectButton>
+                                </ProjectButtonsContainer>
+                            </ProjectImageAndButtonsContainer>
+                            <ProjectDescriptionContainer>
+                                <ProjectTitleDescription>
                                     {project.node.frontmatter.title}
-                                </ProjectsDescription>
-                                <ProjectsDescription>
+                                </ProjectTitleDescription>
+                                <ProjectDescription>
                                     {project.node.frontmatter.description}
-                                </ProjectsDescription>
-                                <ProjectsTechContainer>
-                                    <ProjectsTechList>
+                                </ProjectDescription>
+                                <ProjectTechContainer>
+                                    <ProjectTechList>
                                         {
                                             project.node.frontmatter.techs.map((tech,i) => (
-                                                <ProjectsTechItem>
+                                                <ProjectTechItem key={i}>
                                                     {tech}
-                                                </ProjectsTechItem>
+                                                </ProjectTechItem>
                                             ))
                                         }
-                                    </ProjectsTechList>
-                                </ProjectsTechContainer>
-                            </ProjectsDescriptionContainer>
-                        </ProjectsContainer>
+                                    </ProjectTechList>
+                                </ProjectTechContainer>
+                            </ProjectDescriptionContainer>
+                        </ProjectContainer>
                     ))
                 : 
-                <ProjectsContainer>
-                    <ProjectsDescriptionContainer>
-                        <ProjectsDescription>
-                        There are currently no projects here. Please add some projects to the projects" folder in the "content" folder.
-                        </ProjectsDescription>
-                    </ProjectsDescriptionContainer>
-                </ProjectsContainer>
+                <ProjectContainer>
+                    <ProjectDescriptionContainer>
+                        <ProjectDescription>
+                        There are currently no Project here. Please add some projects to the projects" folder in the "content" folder.
+                        </ProjectDescription>
+                    </ProjectDescriptionContainer>
+                </ProjectContainer>
             }
-        </>
+        </ProjectsContainer>
     )
 };
 

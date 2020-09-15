@@ -18,7 +18,7 @@ const About = ({data}) => {
     const aboutData = data[0].node;
     const {frontmatter} = aboutData;
     return (
-        <AboutContainer>
+        <AboutContainer id='about'>
             <AboutTitle>
                 {frontmatter.title}
             </AboutTitle>

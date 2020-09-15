@@ -1,19 +1,28 @@
 import React from "react";
 import {graphql} from 'gatsby';
+import PropTypes from 'prop-types';
 import Layout from "../components/layout";
 import Hero from "../components/sections/heroSection";
 import Contact from "../components/sections/contactSection";
 import About from "../components/sections/aboutSection";
 import Projects from "../components/sections/projectsSection";
+import Work from "../components/sections/workSection";
 
-const IndexPage = ({data}) => (
-  <Layout>
+
+const IndexPage = ({location, data}) => (
+  <Layout location={location}>
     <Hero data={data.hero.edges} />
     <About data={data.about.edges} />
+    <Work data={data.work.edges} />
     <Projects data={data.projects.edges} />
     <Contact data={data.contact.edges} />
   </Layout>
 );
+
+IndexPage.propTypes = {
+  // location is needed for linking the page and smooth navigation to the page
+  location: PropTypes.object.isRequired
+}
 
 export default IndexPage
 
@@ -57,6 +66,23 @@ export const query = graphql`
         }
       }
     },
+    work: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/work/"}}, 
+      sort: {order: DESC, fields: frontmatter___startDate}) {
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+              company
+              startDate
+              endDate
+              technology
+              jobDescription
+            }
+          }
+        }
+        totalCount
+    }
     projects: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/projects/"}}) {
       edges {
         node {

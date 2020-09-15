@@ -12,5 +12,5 @@ techs:
     - CSS
     - SCSS
     - Javascript
-    - Other languages/dbs/etc
+    - Other 
 ---

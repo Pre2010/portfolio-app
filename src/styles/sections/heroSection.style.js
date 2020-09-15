@@ -21,13 +21,13 @@ export const HeroImage = styled.img`
 `;
 
 export const HeroDescriptionContainer = styled.div`
-    margin: 2% auto 5% auto;
+    margin: 2% auto;
     text-align: center;
     width: 60%;
 `;
 
 export const HeroDescriptionName = styled.span`
-    font-size: 27px;
+    font-size: 45px;
     color: ${colors.titleColor};
 `;
 

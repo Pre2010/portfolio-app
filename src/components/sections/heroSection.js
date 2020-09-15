@@ -20,6 +20,8 @@ const Hero = ({data}) => {
             <HeroDescriptionContainer>
                 <HeroDescription>
                     {frontmatter.heroIntroduction} 
+                </HeroDescription>
+                <HeroDescription>
                     <HeroDescriptionName>{frontmatter.heroName}</HeroDescriptionName>
                 </HeroDescription>
                 <HeroDescription>
