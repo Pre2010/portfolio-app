@@ -4,8 +4,8 @@ import theme from '../theme';
 const {colors} = theme;
 
 export const ContactContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
 `;
 
 export const ContactTitleContainer = styled.div`

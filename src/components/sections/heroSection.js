@@ -16,7 +16,6 @@ const Hero = ({data}) => {
             <HeroImageContainer>
                 <HeroImage src={frontmatter.image.publicURL} alt='hero' />
             </HeroImageContainer>
-            
             <HeroDescriptionContainer>
                 <HeroDescription>
                     {frontmatter.heroIntroduction} 

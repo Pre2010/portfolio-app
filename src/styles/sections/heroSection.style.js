@@ -5,25 +5,29 @@ import theme from '../theme';
 const {colors} = theme;
 
 export const HeroContainer = styled.div`
-
+    display: flex;
 `;
 
 export const HeroImageContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50%;
     /* for mobile? height: 15rem; */
 `;
 
 export const HeroImage = styled.img`
     src: url(${props => props.src});
-    width: 40%;
+    width: 100%;
 `;
 
 export const HeroDescriptionContainer = styled.div`
-    margin: 2% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10%;
     text-align: center;
-    width: 60%;
+    width: 50%;
 `;
 
 export const HeroDescriptionName = styled.span`
@@ -32,6 +36,5 @@ export const HeroDescriptionName = styled.span`
 `;
 
 export const HeroDescription = styled.p`
-    margin: 10px 0 5px 0;
     font-size: 23px;
 `;
