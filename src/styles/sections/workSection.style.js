@@ -27,8 +27,6 @@ export const WorkDescriptionCardBodyContainer = styled.div`
     align-items: center;
 `;
 
-export const WorkDescriptionContainer = styled.div``;
-
 export const WorkCompanyName = styled.h3``;
 
 export const WorkJobTitle = styled.h3``;

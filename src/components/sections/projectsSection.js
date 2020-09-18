@@ -19,8 +19,8 @@ from '../../styles/sections/projectsSection.style';
 
 const Projects = ({data}) => {
     return (
-        <ProjectsContainer>
-            <ProjectTitle id='projects'>
+        <ProjectsContainer id='projects'>
+            <ProjectTitle>
                 Projects
             </ProjectTitle>
             {

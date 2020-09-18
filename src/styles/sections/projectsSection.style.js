@@ -9,7 +9,6 @@ export const ProjectTitle = styled.h1``;
 
 export const ProjectContainer = styled.div`
     display: flex;
-    padding-bottom: 2%;
     margin: 0 10% 2% 10%;
     border-bottom: 2px solid ${colors.borderColor};
     

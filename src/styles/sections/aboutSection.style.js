@@ -47,6 +47,7 @@ export const AboutTechnologyContainer = styled.div`
 
 export const AboutTechnologyDescription = styled.p`
     text-align: center;
+    padding-top: 10px;
 `;
 
 export const AboutTechnologyList = styled.ul`
@@ -54,7 +55,6 @@ export const AboutTechnologyList = styled.ul`
     grid-template-columns: repeat(3, minmax(50px, 175px));
     grid-gap: 10px;
     justify-content: center;
-
     /* TODO media query for smaller device screens, change 3 to auto-fill for the amount of columns */
 `;
 

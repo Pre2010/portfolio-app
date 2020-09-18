@@ -6,6 +6,7 @@ const {colors} = theme;
 
 export const HeroContainer = styled.div`
     display: flex;
+    margin-top: 100px;
 `;
 
 export const HeroImageContainer = styled.div`

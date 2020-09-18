@@ -4,10 +4,7 @@ import {
     WorksTitle,
     WorkJobsAccordionContainer,
     WorkJobsListCardContainer,
-    WorkJobsListAccordionToggle,
-    WorkDescriptionAccordionCollapse,
     WorkDescriptionCardBodyContainer,
-    WorkDescriptionContainer,
     WorkCompanyName,
     WorkJobDate,
     WorkJobTitle,
@@ -23,9 +20,7 @@ import Accordion from 'react-bootstrap/Accordion'
 
 const Work = ({data}) => {
     // sets the most recent job to be automatically opened in the Accordion
-    console.log(data)
     const defaultWork = data[0].node.id;
-    // const jobData = data[0].node.frontmatter;
     const jobTechDescription = "Technology Stack: ";
     return (
         <WorksContainer id='work'>

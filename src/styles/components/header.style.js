@@ -1,14 +1,16 @@
 import styled from 'styled-components';
-import { Link } from "gatsby"
+import {AnchorLink} from 'gatsby-plugin-anchor-links';
 import theme from '../theme';
 import Logo from '../../components/image_components/logoComponent';
-const {colors, margin_left_right} = theme;
+const {colors, margin_left_right, gradients} = theme;
+
+export const HeaderContainer = styled.header``;
 
 export const HeaderNavContainer = styled.nav`
-    display: flex;
-    justify-content: space-between;
+    position: fixed;
     width: 100%;
-    height: 65px;
+    top: 0;
+    z-index: 100;
 `;
 
 export const HeaderLogo = styled(Logo)`
@@ -19,8 +21,24 @@ export const HeaderLogo = styled(Logo)`
 
 `;
 
-export const HeaderNavLinksContainer = styled.div`
+export const HeaderScrollMask = styled.div`
+    width: ${props => props.scrollActive ? '100%' : '0'};
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: ${colors.primaryColor};
+    position: absolute;
+    transition: width 0.5s ease;
+    z-index: -1;
+    box-shadow: 5px 2px ${colors.hoverColor};
+`;
 
+export const HeaderNavLinksContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 65px;
+    margin-top: 1%;
 `;
 
 export const HeaderNavLinkList = styled.ol`
@@ -34,15 +52,35 @@ export const HeaderNavLinkListItem = styled.li`
     padding: 0 15px;
 `;
 
-export const HeaderNavLink = styled(Link)`
+export const HeaderNavLink = styled(AnchorLink)`
     font-size: 20px;
     padding: 0 5px;
+    position: relative;
     color: ${colors.textColor};
     text-decoration: none;
-    transition: color 0.5s ease;
+    transition: all 0.5s ease;
+    z-index: 10;
+
+    &:before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        height: 0%;
+        width: 100%;
+        bottom: -1px;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        background: ${gradients.greenToBlue};
+    }
 
     &:hover {
         color: ${colors.borderColor};
+        &::before {
+            height: 100%;
+            width: 100%;
+            opacity: 1;
+        }
     }
 `;
 

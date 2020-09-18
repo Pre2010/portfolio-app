@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
         color: ${colors.titleColor};
         text-decoration: underline;
         font-size: 50px;
-        margin-bottom: 2%;
+        margin: 2% 0;
     }
 
     h2, h3 {
