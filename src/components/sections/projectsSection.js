@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {
     ProjectsContainer,
     ProjectContainer,
@@ -16,17 +16,26 @@ import {
     ProjectTechItem
 }
 from '../../styles/sections/projectsSection.style';
+import scrollReveal from '../../utils/globalScrollReveal';
+import {scrollRevealConfig} from '../../config';
 
 const Projects = ({data}) => {
+    // scroll reveal animation
+    const revealContainer = useRef(null);
+
+    useEffect(() => {
+        scrollReveal.reveal(revealContainer.current, scrollRevealConfig('top'));
+    }, []);
+
     return (
-        <ProjectsContainer id='projects'>
+        <ProjectsContainer id='projects' ref={revealContainer}>
             <ProjectTitle>
                 Projects
             </ProjectTitle>
             {
                 data.length > 0 ?
                     data.map((project) => (
-                        <ProjectContainer key={project.node.id}>
+                        <ProjectContainer key={project.node.id} ref={scrollRevealConfig}>
                             <ProjectImageAndButtonsContainer>
                                 <ProjectImageContainer>
                                     <ProjectImage src={project.node.frontmatter.imagePath.publicURL} />
@@ -66,7 +75,7 @@ const Projects = ({data}) => {
                         </ProjectContainer>
                     ))
                 : 
-                <ProjectContainer>
+                <ProjectContainer ref={revealContainer}>
                     <ProjectDescriptionContainer>
                         <ProjectDescription>
                         There are currently no Project here. Please add some projects to the projects" folder in the "content" folder.

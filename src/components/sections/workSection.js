@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {
     WorksContainer,
     WorksTitle,
@@ -16,14 +16,23 @@ import {
 }
 from '../../styles/sections/workSection.style';
 import Card from 'react-bootstrap/Card';
-import Accordion from 'react-bootstrap/Accordion'
+import Accordion from 'react-bootstrap/Accordion';
+import scrollReveal from '../../utils/globalScrollReveal';
+import {scrollRevealConfig} from '../../config';
 
 const Work = ({data}) => {
     // sets the most recent job to be automatically opened in the Accordion
     const defaultWork = data[0].node.id;
     const jobTechDescription = "Technology Stack: ";
+
+    // scroll reveal animation
+    const revealContainer = useRef(null);
+    useEffect(() => {
+        scrollReveal.reveal(revealContainer.current, scrollRevealConfig('top'));
+    }, []);
+
     return (
-        <WorksContainer id='work'>
+        <WorksContainer id='work' ref={revealContainer}>
             <WorksTitle>Work Experience</WorksTitle>
             <WorkJobsAccordionContainer>
                     <Accordion defaultActiveKey={defaultWork}>

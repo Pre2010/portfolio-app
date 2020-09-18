@@ -1,6 +1,5 @@
 import React from "react";
 import {graphql} from 'gatsby';
-import PropTypes from 'prop-types';
 import Layout from "../components/layout";
 import Hero from "../components/sections/heroSection";
 import Contact from "../components/sections/contactSection";
@@ -9,8 +8,8 @@ import Projects from "../components/sections/projectsSection";
 import Work from "../components/sections/workSection";
 
 
-const IndexPage = ({location, data}) => (
-  <Layout location={location}>
+const IndexPage = ({data}) => (
+  <Layout>
     <Hero data={data.hero.edges} />
     <About data={data.about.edges} />
     <Work data={data.work.edges} />
@@ -19,14 +18,7 @@ const IndexPage = ({location, data}) => (
   </Layout>
 );
 
-IndexPage.propTypes = {
-  // location is needed for linking the page and smooth navigation to the page
-  location: PropTypes.object.isRequired
-}
-
 export default IndexPage
-
-
 
 export const query = graphql`
     {

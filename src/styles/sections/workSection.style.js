@@ -15,9 +15,20 @@ export const WorkJobsAccordionContainer = styled.div`
     align-items: center;
     text-align: center;
     margin: 0 15% 2% 15%;
+
+    .accordion {
+        border: 1px solid ${colors.borderColor};
+        border-radius: 4px;
+    }
 `;
 
 export const WorkJobsListCardContainer = styled.div`
+    .card {
+        background-color: ${colors.primaryColor};
+    }
+    .card-header {
+        background-color: ${colors.textColor};
+    }
 `;
 
 export const WorkDescriptionCardBodyContainer = styled.div`
@@ -27,7 +38,9 @@ export const WorkDescriptionCardBodyContainer = styled.div`
     align-items: center;
 `;
 
-export const WorkCompanyName = styled.h3``;
+export const WorkCompanyName = styled.h3`
+    color: ${colors.primaryColor};
+`;
 
 export const WorkJobTitle = styled.h3``;
 
