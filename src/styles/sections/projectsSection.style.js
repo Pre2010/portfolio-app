@@ -9,7 +9,9 @@ export const ProjectTitle = styled.h1``;
 
 export const ProjectContainer = styled.div`
     display: flex;
-    margin: 0 10% 2% 10%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
     border-bottom: 2px solid ${colors.borderColor};
 
     @media (min-width: ${sizes.tablet}) {
@@ -21,18 +23,20 @@ export const ProjectContainer = styled.div`
     @media (max-width: ${sizes.tablet}) {
         flex-direction: column;
         align-items: center;
+        margin: 4%;
     }
 `;
 
 export const ProjectImageAndButtonsContainer = styled.div`
     width: 40%;
-    margin-left: 10%;
     max-width: 400px;
+    margin: 0 10%;
 
     @media (max-width: ${sizes.tablet}) {
         width: 100%;
-        margin-left: 0;
+        align-items: center;
         margin-bottom: 3%;
+        margin: 0;
     }
 `;
 
@@ -40,6 +44,13 @@ export const ProjectImageContainer = styled.div`
     display: flex;
     height: 18rem;
     width: 20%;
+
+    @media (max-width: ${sizes.tablet}) {
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export const ProjectImage = styled.img`
@@ -47,7 +58,7 @@ export const ProjectImage = styled.img`
     max-width: 400px;
 
     @media (max-width: ${sizes.mobile}) {
-        max-width: 250px;
+        max-width: 350px;
         max-height: 250px;
     }
 `;
@@ -64,16 +75,18 @@ export const ProjectDescriptionContainer = styled.div`
     align-items: center;
     width: 40%;
     max-width: 400px;
-    margin-left: 15%;
+    margin: 0 10%;
 
     @media (max-width: ${sizes.tablet}) {
         width: 100%;
         margin-left: 0;
         max-width: 800px;
+        margin: 0;
     }
 
     @media (max-width: ${sizes.mobile}) {
         max-width: 500px;
+        margin: 0;
     }
 `;
 
@@ -81,6 +94,10 @@ export const ProjectTitleDescription = styled.h2`
     color: ${colors.titleColor};
     margin: 0;
     margin-bottom: 3%;
+
+    @media (max-width: ${sizes.tablet}) {
+        margin-top: 3%;
+    }
 `;
 
 export const ProjectDescription = styled.p``;

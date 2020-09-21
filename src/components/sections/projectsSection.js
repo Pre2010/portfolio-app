@@ -47,12 +47,17 @@ const Projects = ({data}) => {
                                         rel="nofollow noopener noreferrer">
                                             Source Code
                                     </CustomButton>
-                                    <CustomButton
-                                        href={project.node.frontmatter.livePreviewUrl}
-                                        target="_blank"
-                                        rel="nofollow noopener noreferrer">
-                                            Live Preview
-                                    </CustomButton>
+                                        {
+                                            project.node.frontmatter.livePreviewUrl ?
+                                            <CustomButton
+                                                href={project.node.frontmatter.livePreviewUrl}
+                                                target="_blank"
+                                                rel="nofollow noopener noreferrer">
+                                                    Live Preview
+                                            </CustomButton>
+                                            : null                                            
+                                        }
+                                        
                                 </ProjectButtonsContainer>
                             </ProjectImageAndButtonsContainer>
                             <ProjectDescriptionContainer>

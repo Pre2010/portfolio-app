@@ -56,18 +56,24 @@ const Work = ({data}) => {
                                         <WorkJobDate>
                                             {job.node.frontmatter.startDate} - {job.node.frontmatter.endDate}
                                         </WorkJobDate>
-                                        <WorkJobTechDescription>
-                                            {jobTechDescription}
-                                        </WorkJobTechDescription>
-                                        <WorkJobTechList>
                                             {
-                                                job.node.frontmatter.technology.map((tech, i) => (
-                                                    <WorkJobTechItem key={i}>
-                                                        {tech}
-                                                    </WorkJobTechItem>
-                                                ))
+                                                job.node.frontmatter.technology ?
+                                                <div>
+                                                <WorkJobTechDescription>
+                                                    {jobTechDescription}
+                                                </WorkJobTechDescription>
+                                                <WorkJobTechList>
+                                                    {
+                                                        job.node.frontmatter.technology.map((tech, i) => (
+                                                            <WorkJobTechItem key={i}>
+                                                                {tech}
+                                                            </WorkJobTechItem>
+                                                        ))
+                                                    }
+                                                </WorkJobTechList>
+                                                </div>
+                                                : null
                                             }
-                                        </WorkJobTechList>
                                         <WorkJobDescriptionList>
                                             {
                                                 job.node.frontmatter.jobDescription.map((desc, i) => (

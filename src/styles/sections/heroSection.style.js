@@ -19,8 +19,10 @@ export const HeroImageContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 50%;
+    margin-left: 5%;
 
     @media (max-width: ${sizes.tablet}) {
+        margin: 0;
         width: 75%;
     }
 `;

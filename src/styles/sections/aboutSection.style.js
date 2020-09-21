@@ -16,13 +16,17 @@ const AboutSizeStyle = css`
 export const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
+
+    @media (max-width: ${sizes.tablet}) {
+        
+    }
 `;
 
 export const AboutTitle = styled.h1``;
 
 export const AboutImageAndDescriptionContainer = styled.div`
     display: flex;
-    margin: 0 15%;
+    margin: 0 10%;
     border-bottom: 2px solid ${colors.borderColor};
 
     @media (max-width: ${sizes.tablet}) {
@@ -36,12 +40,20 @@ export const AboutImageContainer = styled.div`
     display: flex;
     height: 25rem;
     width: 50%;
-
-    ${AboutSizeStyle};
+    margin: 3% 0;
+    max-width: 600px;
+    @media (max-width: ${sizes.tablet}) {
+        justify-content: center;
+        width: 80%;
+        height: 80%;
+        
+    }
 `;
 
 export const AboutImage = styled.img`
     src: url(${props => props.src});
+    width: 100%;
+    height: 100%;
 `;
 
 export const AboutDescriptionContainer = styled.div`
