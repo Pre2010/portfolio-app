@@ -1,14 +1,18 @@
 import styled from 'styled-components';
 import theme from '../theme';
 
-const {colors} = theme;
+const {colors, sizes} = theme;
 
 export const WorksContainer = styled.div`
     display: flex;
     flex-direction: column;
 `;
 
-export const WorksTitle = styled.h1``;
+export const WorksTitle = styled.h1`
+    @media (max-width: ${sizes.mobile}) {
+        text-align: center;
+    }
+`;
 
 export const WorkJobsAccordionContainer = styled.div`
     justify-content: center;
@@ -19,6 +23,14 @@ export const WorkJobsAccordionContainer = styled.div`
     .accordion {
         border: 1px solid ${colors.borderColor};
         border-radius: 4px;
+    }
+
+    @media (max-width: ${sizes.tablet}) {
+        margin: 5% 10%;
+    }
+
+    @media (max-width: ${sizes.mobile}) {
+        margin: 0 1%;
     }
 `;
 
@@ -54,6 +66,10 @@ export const WorkJobTechList = styled.ul`
     justify-content: center;
     grid-gap: 5%;
     padding-left: 0;
+
+    @media (max-width: ${sizes.mobile}) {
+        grid-template-columns: repeat(1, 100%);
+    }
 `;
 
 export const WorkJobTechItem = styled.li`
@@ -64,10 +80,18 @@ export const WorkJobTechItem = styled.li`
         padding: 5px;
         color: ${colors.titleColor};
 
+        @media (max-width: ${sizes.mobile}) {
+            content: '>';
+        }
     }
 `;
 
-export const WorkJobDescriptionList = styled.ul``;
+export const WorkJobDescriptionList = styled.ul`
+    
+    @media (max-width: ${sizes.tablet}) {
+        padding-left: 0;
+    }
+`;
 
 export const WorkJobDescriptionItem = styled.li`
     list-style: none;

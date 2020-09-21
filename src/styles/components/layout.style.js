@@ -1,11 +1,11 @@
 import {createGlobalStyle} from 'styled-components';
 import theme from '../theme';
-const {colors} = theme;
+const {colors, sizes} = theme;
 
 
 export const GlobalStyle = createGlobalStyle`
     body {
-        width: 100%;
+        min-width: 100%;
         min-height: 100%;
         margin: 0;
         font-family: Lustria, Arial, Helvetica, sans-serif;
@@ -23,7 +23,13 @@ export const GlobalStyle = createGlobalStyle`
         color: ${colors.titleColor};
         text-decoration: underline;
         font-size: 50px;
-        margin: 2% 0;
+        margin: 0;
+        margin-bottom: 3%;
+        margin-top: 10%;
+
+        @media (max-width: ${sizes.mobile}) {
+            margin-bottom: 10%;
+        }
     }
 
     h2, h3 {

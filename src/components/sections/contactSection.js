@@ -60,7 +60,7 @@ const Contact = ({data}) => {
                     <ContactImg src={frontmatter.image.publicURL} alt='contact'/>
                 </ContactImgContainer>
             </ContactCtaAndImageContainer>
-            <ContactButtonContainer>
+            <ContactButtonContainer ref={revealContainer}>
                 <ContactButton href={`mailto:${email}`} target='_blank' rel='noreferrer noopener nofollow'>{frontmatter.button}</ContactButton>
             </ContactButtonContainer>
         </ContactContainer>

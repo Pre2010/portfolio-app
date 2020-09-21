@@ -1,12 +1,17 @@
 import styled from 'styled-components';
-// import HeroImageSvg from '../../images/heroImage';
 import theme from '../theme';
 
-const {colors} = theme;
+const {colors, sizes} = theme;
 
 export const HeroContainer = styled.div`
     display: flex;
     margin-top: 100px;
+
+    @media (max-width: ${sizes.tablet}) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export const HeroImageContainer = styled.div`
@@ -14,7 +19,10 @@ export const HeroImageContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 50%;
-    /* for mobile? height: 15rem; */
+
+    @media (max-width: ${sizes.tablet}) {
+        width: 75%;
+    }
 `;
 
 export const HeroImage = styled.img`
@@ -29,6 +37,10 @@ export const HeroDescriptionContainer = styled.div`
     margin: 0 10%;
     text-align: center;
     width: 50%;
+
+    @media (max-width: ${sizes.tablet}) {
+        width: 100%;
+    }
 `;
 
 export const HeroDescriptionName = styled.span`

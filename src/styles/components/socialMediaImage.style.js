@@ -9,6 +9,7 @@ export const SocialMediaList = styled.ul`
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     padding: 0;
     margin: 0;

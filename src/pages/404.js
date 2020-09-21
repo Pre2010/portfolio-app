@@ -2,9 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import {
-  div404Container,
-  Image404Container,
-  Image404,
+  Div404Container,
   Description404Container,
   Title404,
   Description404
@@ -12,17 +10,15 @@ import {
 
 const NotFoundPage = () => (
   <Layout>
-    <div404Container>
-      <Image404Container>
-        <Image404 />
-      </Image404Container>
+    <Div404Container>
       <Description404Container>
+        <Title404>404</Title404>
         <Title404>Page Not Found</Title404>
         <Description404>
           This page doesn't exist.
         </Description404>
       </Description404Container>
-    </div404Container>
+    </Div404Container>
   </Layout>
 )
 

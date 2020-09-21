@@ -1,25 +1,34 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import theme from '../theme';
 
-const {colors} = theme;
+const {colors, sizes} = theme;
 
-export const ContactContainer = styled.div`
-    /* display: flex;
-    flex-direction: column; */
+const ContactSizeStyle = css`
+    @media (max-width: ${sizes.tablet}) {
+        width: 100%;
+    }
 `;
 
-export const ContactTitleContainer = styled.div`
+export const ContactContainer = styled.div``;
 
-`;
+export const ContactTitleContainer = styled.div``;
 
-export const ContactTitle = styled.h1`
-    
-`;
+export const ContactTitle = styled.h1``;
 
 export const ContactCtaAndImageContainer = styled.div`
     display: flex;
     margin: 0 20%;
     margin-bottom: 25px;
+
+    @media (max-width: ${sizes.tablet}) {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 5% 10%;
+    }
+
+    @media (max-width: ${sizes.mobile}) {
+        margin: 10% 1%;
+    }
 `;
 
 export const ContactCtaContainer = styled.div`
@@ -30,6 +39,8 @@ export const ContactCtaContainer = styled.div`
     border-radius: 10px;
     padding: 25px;
     width: 40%;
+
+    ${ContactSizeStyle};
 `;
 
 export const ContactCta = styled.p`
@@ -41,6 +52,8 @@ export const ContactImgContainer = styled.div`
     display: flex;
     height: 100%;
     width: 60%;
+
+    ${ContactSizeStyle};
 `;
 
 export const ContactImg = styled.img`

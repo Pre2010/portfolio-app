@@ -7,7 +7,6 @@ import {
     ProjectImageContainer,
     ProjectImage,
     ProjectButtonsContainer,
-    ProjectButton,
     ProjectDescriptionContainer,
     ProjectTitleDescription,
     ProjectDescription,
@@ -18,6 +17,7 @@ import {
 from '../../styles/sections/projectsSection.style';
 import scrollReveal from '../../utils/globalScrollReveal';
 import {scrollRevealConfig} from '../../config';
+import CustomButton from '../customButton';
 
 const Projects = ({data}) => {
     // scroll reveal animation
@@ -41,16 +41,18 @@ const Projects = ({data}) => {
                                     <ProjectImage src={project.node.frontmatter.imagePath.publicURL} />
                                 </ProjectImageContainer>
                                 <ProjectButtonsContainer>
-                                    <ProjectButton 
+                                    <CustomButton
                                         href={project.node.frontmatter.github}
                                         target="_blank"
-                                        rel="nofollow noopener noreferrer"
-                                        >Repo</ProjectButton>
-                                    <ProjectButton
+                                        rel="nofollow noopener noreferrer">
+                                            Source Code
+                                    </CustomButton>
+                                    <CustomButton
                                         href={project.node.frontmatter.livePreviewUrl}
                                         target="_blank"
-                                        rel="nofollow noopener noreferrer"
-                                        >Live Preview</ProjectButton>
+                                        rel="nofollow noopener noreferrer">
+                                            Live Preview
+                                    </CustomButton>
                                 </ProjectButtonsContainer>
                             </ProjectImageAndButtonsContainer>
                             <ProjectDescriptionContainer>

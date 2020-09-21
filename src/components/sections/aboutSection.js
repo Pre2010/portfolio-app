@@ -24,10 +24,13 @@ const About = ({data}) => {
     const revealContainer = useRef(null);
     const revealProfessionalContainer = useRef(null);
     const revealPersonalContainer = useRef(null);
+    const revealTechContainer = useRef(null);
+
     useEffect(() => {
         scrollReveal.reveal(revealContainer.current, scrollRevealConfig('top'));
         scrollReveal.reveal(revealProfessionalContainer.current, scrollRevealConfig('right', 500));
         scrollReveal.reveal(revealPersonalContainer.current, scrollRevealConfig('left', 500));
+        scrollReveal.reveal(revealTechContainer.current, scrollRevealConfig('bottom', 500));
     }, []);
 
     return (
@@ -55,7 +58,7 @@ const About = ({data}) => {
                     <AboutImage src={frontmatter.personalImage.publicURL} alt='personal image' />
                 </AboutImageContainer>
             </AboutImageAndDescriptionContainer>
-            <AboutTechnologyContainer ref={revealContainer}>
+            <AboutTechnologyContainer ref={revealTechContainer}>
                 {
                     frontmatter.techs ? 
                     <AboutTechnologyDescription>

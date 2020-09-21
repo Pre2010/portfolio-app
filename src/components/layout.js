@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from './header';
+import Header from './Header/header';
 import Footer from './footer';
 import {GlobalStyle} from '../styles/components/layout.style';
 

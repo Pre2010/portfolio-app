@@ -11,7 +11,14 @@ const theme = {
     margin_left_right: 10,
     gradients: {
         greenToBlue: 'linear-gradient(-90deg, #0C9D7A, #243A51)',
-        yellowToOrange: 'linear-gradient(#F29F12, #F26512)'
+        greenToOrange: 'linear-gradient(-90deg, #0C9D7A, #F26512)',
+        yellowToOrange: 'linear-gradient(-90deg, #F29F12, #F26512)',
+        yellowToGreen: 'linear-gradient(-90deg, #F29F12, #0C9D7A)'
+    },
+    sizes: {
+        sm_mobile: '400px',
+        mobile: '600px',
+        tablet: '900px'
     },
 };
 
