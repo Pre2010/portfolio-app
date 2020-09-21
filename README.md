@@ -24,6 +24,8 @@
     Go into the 'content' folder -> 'work' folder
     Update the Markdown file to your job info.
     If you need to add another job, add another Markdown file or copy/paste one of the Markdown files in the folder and use it as a template.
+    The 'id' field is denotes the order in which the job shows up in the Work Experience section.
+    The higher the id, the higher up it'll appear.
 
 ## How to update your Contact
 
@@ -42,8 +44,8 @@
 
     Go into 'styles' folder -> theme.js.
     Update the variables in there to what you would like.
-<!-- 
-## How to add your resume
+
+<!-- ## How to add your resume
 
     Go into 'content' folder -> 'resume' folder.
     Add a .pdf or .doc file of your resume in there and get rid of the example image in there.

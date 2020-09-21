@@ -59,11 +59,12 @@ export const query = graphql`
       }
     },
     work: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/work/"}}, 
-      sort: {order: DESC, fields: frontmatter___startDate}) {
+      sort: {order: DESC, fields: frontmatter___id}) {
         edges {
           node {
             id
             frontmatter {
+              id
               title
               company
               startDate
