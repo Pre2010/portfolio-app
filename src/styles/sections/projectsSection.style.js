@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 import theme from '../theme';
 
 const {colors, sizes} = theme;
@@ -42,26 +43,10 @@ export const ProjectImageAndButtonsContainer = styled.div`
 
 export const ProjectImageContainer = styled.div`
     display: flex;
-    height: 18rem;
-    width: 20%;
-
-    @media (max-width: ${sizes.tablet}) {
-        height: 100%;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
+    flex-direction: column;
 `;
 
-export const ProjectImage = styled.img`
-    src: url(${props => props.src});
-    max-width: 400px;
-
-    @media (max-width: ${sizes.mobile}) {
-        max-width: 350px;
-        max-height: 250px;
-    }
-`;
+export const ProjectImage = styled(Img)``;
 
 export const ProjectButtonsContainer = styled.div`
     display: flex;

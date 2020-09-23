@@ -18,6 +18,7 @@ import {email, scrollRevealConfig} from '../../config';
 const Contact = ({data}) => {
     const contactData = data[0].node;
     const {frontmatter} = contactData;
+    const {firstParagraph, secondParagraph, thirdParagraph, image, button} = frontmatter;
 
     // scroll reveal animation
     const revealContainer = useRef(null);
@@ -25,9 +26,11 @@ const Contact = ({data}) => {
     const revealImageContainer = useRef(null);
 
     useEffect(() => {
+        if (typeof window !== 'undefined') {
         scrollReveal.reveal(revealContainer.current, scrollRevealConfig('top'));
         scrollReveal.reveal(revealCtaContainer.current, scrollRevealConfig('left', 500));
         scrollReveal.reveal(revealImageContainer.current, scrollRevealConfig('right', 500));
+        }
     }, []);
 
     return (
@@ -38,30 +41,30 @@ const Contact = ({data}) => {
             <ContactCtaAndImageContainer ref={revealCtaContainer}>
                 <ContactCtaContainer>
                     <ContactCta>
-                        {frontmatter.firstParagraph}
+                        {firstParagraph}
                     </ContactCta>
                     {
-                        frontmatter.secondParagraph ?
+                        secondParagraph ?
                         <ContactCta>
-                        {frontmatter.secondParagraph}
+                        {secondParagraph}
                         </ContactCta>
                         : null
                     }
                     {
-                        frontmatter.thirdParagraph ?
+                        thirdParagraph ?
                         <ContactCta>
-                            {frontmatter.thirdParagraph}
+                            {thirdParagraph}
                         </ContactCta>
                         : null
                     }
                     
                 </ContactCtaContainer>
                 <ContactImgContainer ref={revealImageContainer}>
-                    <ContactImg src={frontmatter.image.publicURL} alt='contact'/>
+                    <ContactImg fluid={image.childImageSharp.fluid} alt='contact' />
                 </ContactImgContainer>
             </ContactCtaAndImageContainer>
             <ContactButtonContainer ref={revealContainer}>
-                <ContactButton href={`mailto:${email}`} target='_blank' rel='noreferrer noopener nofollow'>{frontmatter.button}</ContactButton>
+                <ContactButton href={`mailto:${email}`} target='_blank' rel='noreferrer noopener nofollow'>{button}</ContactButton>
             </ContactButtonContainer>
         </ContactContainer>
     )

@@ -21,8 +21,8 @@ const IndexPage = ({data}) => (
 export default IndexPage
 
 export const query = graphql`
-    {
-      hero: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/hero/"}}) {
+  {
+    hero: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/hero/"}}) {
       edges {
         node {
           id
@@ -32,32 +32,50 @@ export const query = graphql`
             heroSubtitle
             heroDescription
             image {
-              publicURL
+              id
+              childImageSharp {
+                fluid(maxWidth: 700, maxHeight: 650, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluidLimitPresentationSize
+                }
+              }
             }
           }
         }
       }
     },
     about: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/about/"}}) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            professionalImage {
-              publicURL
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          professionalImage {
+            publicURL
+            childImageSharp {
+              fluid(maxHeight: 400, maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluidLimitPresentationSize
+              }
             }
-            professionalDescription
-            personalImage {
-              publicURL
-            }
-            personalDescription
-            techDescription
-            techs
           }
+          professionalDescription
+          personalImage {
+            publicURL
+            childImageSharp {
+              fluid(maxHeight: 400, maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluidLimitPresentationSize
+              }
+            }
+          }
+          personalDescription
+          techDescription
+          techs
         }
       }
-    },
+    }
+  },
     work: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/work/"}}, 
       sort: {order: DESC, fields: frontmatter___id}) {
         edges {
@@ -76,36 +94,49 @@ export const query = graphql`
         }
         totalCount
     }
-    projects: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/projects/"}}) {
+    projects: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/projects/"}}, 
+    sort: {order: DESC, fields: frontmatter___id}) {
       edges {
         node {
           id
           frontmatter {
+            id
             title
             github
             livePreviewUrl
-            imagePath {
-              publicURL
+            image {
+              childImageSharp {
+                fluid(maxHeight: 300, maxWidth: 500, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluidLimitPresentationSize
+                }
+              }
             }
             description
             techs
           }
         }
       }
-    }
+    },
     contact: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/contact/"}}) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            firstParagraph
-            secondParagraph
-            thirdParagraph
-            button
-            image {
-              publicURL
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          firstParagraph
+          secondParagraph
+          thirdParagraph
+          button
+          image {
+            publicURL
+            childImageSharp {
+              fluid(maxHeight: 550, maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluidLimitPresentationSize
+              }
             }
+          }
         }
       }
     }

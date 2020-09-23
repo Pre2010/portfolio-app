@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components';
+import Img from 'gatsby-image';
 import theme from '../theme';
 
 const {colors, sizes} = theme;
@@ -39,6 +40,7 @@ export const ContactCtaContainer = styled.div`
     border-radius: 10px;
     padding: 25px;
     width: 40%;
+    text-align: center;
 
     ${ContactSizeStyle};
 `;
@@ -50,15 +52,18 @@ export const ContactCta = styled.p`
 
 export const ContactImgContainer = styled.div`
     display: flex;
+    flex-direction: column;
     height: 100%;
     width: 60%;
 
     ${ContactSizeStyle};
 `;
 
-export const ContactImg = styled.img`
-    src: url(${props => props.src});
-`;
+// export const ContactImg = styled.img`
+//     src: url(${props => props.src});
+// `;
+
+export const ContactImg = styled(Img)``;
 
 export const ContactButtonContainer = styled.div`
     display: flex;

@@ -24,7 +24,9 @@ const Projects = ({data}) => {
     const revealContainer = useRef(null);
 
     useEffect(() => {
+        if (typeof window !== 'undefined') {
         scrollReveal.reveal(revealContainer.current, scrollRevealConfig('top'));
+        }
     }, []);
 
     return (
@@ -38,7 +40,7 @@ const Projects = ({data}) => {
                         <ProjectContainer key={project.node.id} ref={scrollRevealConfig}>
                             <ProjectImageAndButtonsContainer>
                                 <ProjectImageContainer>
-                                    <ProjectImage src={project.node.frontmatter.imagePath.publicURL} />
+                                    <ProjectImage fluid={project.node.frontmatter.image.childImageSharp.fluid} alt='project'/>
                                 </ProjectImageContainer>
                                 <ProjectButtonsContainer>
                                     <CustomButton
@@ -57,7 +59,6 @@ const Projects = ({data}) => {
                                             </CustomButton>
                                             : null                                            
                                         }
-                                        
                                 </ProjectButtonsContainer>
                             </ProjectImageAndButtonsContainer>
                             <ProjectDescriptionContainer>

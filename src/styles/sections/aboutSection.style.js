@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components';
+import Img from 'gatsby-image';
 import theme from '../theme';
 
 const {colors, sizes} = theme;
@@ -38,7 +39,9 @@ export const AboutImageAndDescriptionContainer = styled.div`
 
 export const AboutImageContainer = styled.div`
     display: flex;
-    height: 25rem;
+    flex-direction: column;
+    /* height: 25rem; */
+    height: 100%;
     width: 50%;
     margin: 3% 0;
     max-width: 600px;
@@ -46,15 +49,16 @@ export const AboutImageContainer = styled.div`
         justify-content: center;
         width: 80%;
         height: 80%;
-        
     }
 `;
 
-export const AboutImage = styled.img`
-    src: url(${props => props.src});
-    width: 100%;
-    height: 100%;
-`;
+// export const AboutImage = styled.img`
+//     src: url(${props => props.src});
+//     width: 100%;
+//     height: 100%;
+// `;
+
+export const AboutImage = styled(Img)``;
 
 export const AboutDescriptionContainer = styled.div`
     display: flex;

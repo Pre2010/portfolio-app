@@ -63,13 +63,19 @@ export const WorkJobTechDescription = styled.p`
 
 export const WorkJobTechList = styled.ul`
     display: grid;
-    grid-template-columns: repeat(3, minmax(50%, 60%));
+    grid-template-columns: repeat(2, minmax(50%, 60%));
     justify-content: center;
     grid-gap: 5%;
     padding-left: 0;
+    margin-bottom: 10%;
+
+    @media (max-width: ${sizes.tablet}) {
+        grid-template-columns: repeat(2, 50%);
+    }
 
     @media (max-width: ${sizes.mobile}) {
         grid-template-columns: repeat(1, 100%);
+        margin-bottom: 50%;
     }
 `;
 

@@ -1,5 +1,5 @@
 ---
-image: './example_hero.svg'
+image: './example_hero.png'
 heroIntroduction: "Hi I'm "
 heroName: 'Your name here'
 heroSubtitle: 'Short bit of either your job title or what you like to do. Ex. Build amazing websites, like to draw, love all animals, etc.'

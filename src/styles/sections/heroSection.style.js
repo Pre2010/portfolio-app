@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 import theme from '../theme';
 
 const {colors, sizes} = theme;
@@ -16,8 +17,8 @@ export const HeroContainer = styled.div`
 
 export const HeroImageContainer = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     width: 50%;
     margin-left: 5%;
 
@@ -27,10 +28,8 @@ export const HeroImageContainer = styled.div`
     }
 `;
 
-export const HeroImage = styled.img`
-    src: url(${props => props.src});
-    width: 100%;
-`;
+export const HeroImage = styled(Img)``;
+
 
 export const HeroDescriptionContainer = styled.div`
     display: flex;

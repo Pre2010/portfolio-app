@@ -23,11 +23,11 @@ const Header = () => {
   const scrollY = useScrollYPosition();
   const [showStickyNav, setShowStickyNav] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
-  
+
   useEffect(() => {
     setShowStickyNav(scrollY !== 0 ? true : false);
     setOpenMenu(false);
-  }, [scrollY]);
+  }, []);
   
 
   return (

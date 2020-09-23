@@ -28,7 +28,9 @@ const Work = ({data}) => {
     // scroll reveal animation
     const revealContainer = useRef(null);
     useEffect(() => {
-        scrollReveal.reveal(revealContainer.current, scrollRevealConfig('top'));
+        if (typeof window !== 'undefined') {
+            scrollReveal.reveal(revealContainer.current, scrollRevealConfig('top'));
+        }
     }, []);
 
     return (

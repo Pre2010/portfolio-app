@@ -19,6 +19,15 @@ import {scrollRevealConfig} from '../../config';
 const About = ({data}) => {
     const aboutData = data[0].node;
     const {frontmatter} = aboutData;
+    const {
+        title, 
+        professionalImage, 
+        professionalDescription, 
+        personalImage, 
+        personalDescription, 
+        techDescription, 
+        techs
+    } = frontmatter;
 
     // scroll reveal animation
     const revealContainer = useRef(null);
@@ -27,49 +36,51 @@ const About = ({data}) => {
     const revealTechContainer = useRef(null);
 
     useEffect(() => {
+        if (typeof window !== 'undefined') {
         scrollReveal.reveal(revealContainer.current, scrollRevealConfig('top'));
         scrollReveal.reveal(revealProfessionalContainer.current, scrollRevealConfig('right', 500));
         scrollReveal.reveal(revealPersonalContainer.current, scrollRevealConfig('left', 500));
         scrollReveal.reveal(revealTechContainer.current, scrollRevealConfig('bottom', 500));
+        }
     }, []);
 
     return (
         <AboutContainer id='about' ref={revealContainer}>
             <AboutTitle>
-                {frontmatter.title}
+                {title}
             </AboutTitle>
             <AboutImageAndDescriptionContainer ref={revealProfessionalContainer}>
                 <AboutImageContainer>
-                    <AboutImage src={frontmatter.professionalImage.publicURL} alt='professional image' />
+                    <AboutImage fluid={professionalImage.childImageSharp.fluid} alt='professional image' />
                 </AboutImageContainer>
                 <AboutDescriptionContainer>
                     <AboutDescription>
-                        {frontmatter.professionalDescription}
+                        {professionalDescription}
                     </AboutDescription>
                 </AboutDescriptionContainer>
             </AboutImageAndDescriptionContainer>
             <AboutImageAndDescriptionContainer ref={revealPersonalContainer}>
                 <AboutDescriptionContainer>
                     <AboutDescription>
-                        {frontmatter.personalDescription}
+                        {personalDescription}
                     </AboutDescription>
                 </AboutDescriptionContainer>
                 <AboutImageContainer>
-                    <AboutImage src={frontmatter.personalImage.publicURL} alt='personal image' />
+                    <AboutImage fluid={personalImage.childImageSharp.fluid} alt='personal image' />
                 </AboutImageContainer>
             </AboutImageAndDescriptionContainer>
             <AboutTechnologyContainer ref={revealTechContainer}>
                 {
-                    frontmatter.techs ? 
+                    techs ? 
                     <AboutTechnologyDescription>
-                        {frontmatter.techDescription}
+                        {techDescription}
                     </AboutTechnologyDescription>
                     : null
                 }
                 <AboutTechnologyList>
                     {
-                        frontmatter.techs ?
-                        frontmatter.techs.map((tech,i) => (
+                        techs ?
+                        techs.map((tech,i) => (
                             <AboutTechnologyItem key={i}>{tech}</AboutTechnologyItem>
                         ))
                         : null

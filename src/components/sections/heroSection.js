@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {
     HeroContainer,
     HeroDescriptionContainer,
@@ -8,26 +8,40 @@ import {
     HeroImage
 } from '../../styles/sections/heroSection.style';
 
+import scrollReveal from '../../utils/globalScrollReveal';
+import {scrollRevealConfig} from '../../config';
+
 const Hero = ({data}) => {
     const heroData = data[0].node;
     const {frontmatter} = heroData;
+    const {image, heroIntroduction, heroDescription, heroName, heroSubtitle} = frontmatter;
+
+    // scroll reveal animation
+    const revealContainer = useRef(null);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {  
+            scrollReveal.reveal(revealContainer.current, scrollRevealConfig('top'));
+        }
+    }, []);
+
     return (
-        <HeroContainer>
+        <HeroContainer ref={revealContainer}>
             <HeroImageContainer>
-                <HeroImage src={frontmatter.image.publicURL} alt='hero' />
+                <HeroImage fluid={image.childImageSharp.fluid} alt='Hero' />
             </HeroImageContainer>
             <HeroDescriptionContainer>
                 <HeroDescription>
-                    {frontmatter.heroIntroduction} 
+                    {heroIntroduction} 
                 </HeroDescription>
                 <HeroDescription>
-                    <HeroDescriptionName>{frontmatter.heroName}</HeroDescriptionName>
+                    <HeroDescriptionName>{heroName}</HeroDescriptionName>
                 </HeroDescription>
                 <HeroDescription>
-                    {frontmatter.heroSubtitle}
+                    {heroSubtitle}
                 </HeroDescription>
                 <HeroDescription>
-                    {frontmatter.heroDescription}
+                    {heroDescription}
                 </HeroDescription>
             </HeroDescriptionContainer>
         </HeroContainer>

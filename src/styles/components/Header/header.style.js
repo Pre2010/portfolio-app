@@ -161,7 +161,7 @@ export const HamburgerMenuOpenContainer = styled.div`
     background-color: ${colors.primaryColor};
     transform: translateX(${props => (props.openMenu ? '0%' : '100%')});
     transition: transform 0.5s ease;
-    top: 80px;
+    top: 75px;
     left: 0;
     padding: 2rem;
     align-items: center;
