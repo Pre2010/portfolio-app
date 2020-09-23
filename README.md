@@ -45,11 +45,12 @@
     Go into 'styles' folder -> theme.js.
     Update the variables in there to what you would like.
 
-<!-- ## How to add your resume
+## How to add your resume
 
-    Go into 'content' folder -> 'resume' folder.
-    Add a .pdf or .doc file of your resume in there and get rid of the example image in there.
-    Go into the '' file, go down to the HeaderResumeButton component, and update the link to point to your resume. -->
+    Go into the 'Header' folder -> 'header.js' file.
+    Copy and paste a link of a Google Drive location of your Resume.
+    And paste it in the 'href' of the CustomButton tags. 
+    Should be two tags.
 
 ## How to add your social media accounts
 
