@@ -50,7 +50,6 @@
     Go into the 'content' folder -> 'contact' folder
     Update the Markdown file to what you'd like to put in there.
 
-
 ## How to add projects
 
     Go into the 'content' folder -> 'projects' folder.
@@ -69,6 +68,10 @@
     Copy and paste a link of a Google Drive location of your Resume.
     And paste it in the 'href' of the CustomButton tags. 
     Should be two tags.
+
+## How to add your email
+
+    Go into the config.js file and go to the 'email' field and put your email there.
 
 ## How to add your social media accounts
 
