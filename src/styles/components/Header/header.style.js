@@ -155,7 +155,7 @@ export const HamburgerMenuOpenContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 64px);
     position: fixed;
     line-height: 3rem;
     background-color: ${colors.primaryColor};
@@ -163,11 +163,15 @@ export const HamburgerMenuOpenContainer = styled.div`
     transition: transform 0.5s ease;
     top: 75px;
     left: 0;
-    padding: 2rem;
+    padding: 4rem;
     align-items: center;
 
-    @media (min-width: ${sizes.mobile}) {
-        padding: 4rem;
+    @media (max-width: ${sizes.tablet}) {
+        top: 74px;
+    }
+
+    @media (max-width: ${sizes.mobile}) {
+        top: 64px;
     }
 
     div > ol {
