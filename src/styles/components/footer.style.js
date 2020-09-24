@@ -9,8 +9,6 @@ export const FooterContainer = styled.div`
     justify-content: center;
     margin-top: 25px;
     background: ${colors.primaryColor};
-
-    // TODO media query for screens less than x px. if so, set flex direction to column
 `;
 
 export const FooterInfoContainer = styled.div`
@@ -25,4 +23,14 @@ export const FooterInfo = styled.p`
     margin: 10px 0;
     padding: 0 5px;
     text-align: center;
+`;
+
+export const FooterGitHubLink = styled.a`
+    text-decoration: none;
+    padding-left: 5px;
+    color: ${colors.borderColor};
+
+    &:hover {
+        color: ${colors.titleColor};
+    }
 `;

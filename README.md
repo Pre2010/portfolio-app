@@ -1,4 +1,22 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+## If you want to use this project, please fork it. (Please read on)
+
+    If you would like to use this template to build your own portfolio site, you absolutely can!
+    But with attribution. While the project is open source, plagiarism is a no no.
+
+    Please give me credit for the hard work that I put into the site and all I ask is that you leave the footer text and link pointing to my GitHub
+    alone which gives me credit for designing and developing the site.
+
+    Other than that, have at it!
+
+## TL;DR version of above
+
+    Yes, you can fork this project but please give credit where it's due by leaving the footer text and GitHub link alone.
+
+## How to remove current origin repository
+
+    Go to your terminal and run command:
+    'git remote remove origin' without the quotes.
 
 ## Run npm install before starting the project
     Go to your terminal, go to the root directory of the project, and type in 'npm i' without the quotes to install all of the necessary packages and libraries needed for the app to run.
@@ -61,4 +79,24 @@
     Next go to 'components' -> socialMediaImage.js.
     Add your social media icon component to the switch case statement.
 
+## How to change the background
+
+    Go into the 'styles' folder -> 'components' folder -> 'layout.style.js' file.
+    In the body css selector, you can change the background image and/or color.
+    Also define your own global variables here.
+    I got my background from SVGBackgrounds.com.
+
+## How to add your logo
+
+    Go into the  'images' folder and set your image in there with the name 'logo.svg'.
+    If your image is an .svg file. Then convert it to a .js file using the current 'logo.js' as a guide.
+
+## How to build and run for production
+
+    In your terminal, go to the root directory of the project.
+    Use command 'npm run build' without the quotes.
+
+    After the project builds successfully, run the command:
+    'npm run serve' without the quotes.
+    It should put your prod build on localhost:9000.
 <!-- AUTO-GENERATED-CONTENT:END -->

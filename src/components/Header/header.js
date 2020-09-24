@@ -25,7 +25,7 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
-    setShowStickyNav(scrollY !== 0 ? true : false);
+    setShowStickyNav(true);
     setOpenMenu(false);
   }, []);
   
