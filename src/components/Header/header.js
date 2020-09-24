@@ -16,11 +16,11 @@ import {
   HamburgerMenuOpenContainer, HamburgerMenuButtonContainer
 } from '../../styles/components/Header/header.style';
 import SocialMedia from "../image_components/socialMedia";
-import {useScrollYPosition} from 'react-use-scroll-position';
+// import {useScrollYPosition} from 'react-use-scroll-position';
 import CustomButton from '../customButton';
 
 const Header = () => {
-  const scrollY = useScrollYPosition();
+  // const scrollY = useScrollYPosition();
   const [showStickyNav, setShowStickyNav] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -57,7 +57,8 @@ const Header = () => {
                   <HamburgerMenuBottomBar />
               </HamburgerMenuButton>
             </HamburgerMenuButtonContainer>
-            <HamburgerMenuOpenContainer openMenu={openMenu}>
+            <HamburgerMenuOpenContainer openMenu={openMenu}
+            onClick={() => setOpenMenu(!openMenu)}>
                 <NavBarLinksStyled />
                 <SocialMedia />
                 <CustomButton
