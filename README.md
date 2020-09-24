@@ -4,14 +4,16 @@
     If you would like to use this template to build your own portfolio site, you absolutely can!
     But with attribution. While the project is open source, plagiarism is a no no.
 
-    Please give me credit for the hard work that I put into the site and all I ask is that you leave the footer text and link pointing to my GitHub
+    Please give me credit for the hard work that I put into the site and all I ask is that you 
+    leave the footer text and link pointing to my GitHub
     alone which gives me credit for designing and developing the site.
 
     Other than that, have at it!
 
 ## TL;DR version of above
 
-    Yes, you can fork this project but please give credit where it's due by leaving the footer text and GitHub link alone.
+    Yes, you can fork this project but please give credit where it's due 
+    by leaving the footer text and GitHub link alone.
 
 ## How to remove current origin repository
 
@@ -19,17 +21,22 @@
     'git remote remove origin' without the quotes.
 
 ## Run npm install before starting the project
-    Go to your terminal, go to the root directory of the project, and type in 'npm i' without the quotes to install all of the necessary packages and libraries needed for the app to run.
+    Go to your terminal, go to the root directory of the project, and type in 'npm i'
+     without the quotes to install all of the necessary packages 
+     and libraries needed for the app to run.
 
 ## How to run a local server
 
-    Go to your terminal, go to the root directory of the project, and type in 'gatbsy develop' without the quotes.
-    This will spin up a local instance of the app on localhost:8000 as well as a GraphQL local instance on localhost:8000/___graphql.
+    Go to your terminal, go to the root directory of the project, 
+    and type in 'gatbsy develop' without the quotes.
+    This will spin up a local instance of the app on localhost:8000 
+    as well as a GraphQL local instance on localhost:8000/___graphql.
 
 ## How to update your Hero
 
     Go into the 'content' folder -> 'hero' folder
-    Update the Markdown file to your info and an image or remove the image if you don't want one.
+    Update the Markdown file to your info and an image 
+    or remove the image if you don't want one.
 
 ## How to update your About
 
@@ -41,8 +48,10 @@
 
     Go into the 'content' folder -> 'work' folder
     Update the Markdown file to your job info.
-    If you need to add another job, add another Markdown file or copy/paste one of the Markdown files in the folder and use it as a template.
-    The 'id' field is denotes the order in which the job shows up in the Work Experience section.
+    If you need to add another job, add another Markdown file 
+    or copy/paste one of the Markdown files in the folder and use it as a template.
+    The 'id' field is denotes the order in which the job 
+    shows up in the Work Experience section.
     The higher the id, the higher up it'll appear.
 
 ## How to update your Contact
@@ -53,9 +62,11 @@
 ## How to add projects
 
     Go into the 'content' folder -> 'projects' folder.
-    Update the Markdown file for the project and fill in the fields with the information about the project.
+    Update the Markdown file for the project and fill in the fields 
+    with the information about the project.
     And an image or remove the image if you don't want one.
-    If you need to add another project, add another Markdown file or copy/paste one of the Markdown files in the folder and use it as a template.
+    If you need to add another project, add another Markdown file or 
+    copy/paste one of the Markdown files in the folder and use it as a template.
 
 ## How to update the styling
 
@@ -77,7 +88,8 @@
 
     Go into config.js file and go to socialMedia array.
     Enter your social media name and url using a lowercase convention for the name.
-    Next add your social media icons, in .svg or .js format, to 'src' folder -> 'images' folder -> 'social_media_icons' folder.
+    Next add your social media icons, in .svg or .js format, 
+    to 'src' folder -> 'images' folder -> 'social_media_icons' folder.
     Convert the .js if it isn't already, turn the image into a funcitonal component.
     Next go to 'components' -> socialMediaImage.js.
     Add your social media icon component to the switch case statement.
@@ -91,8 +103,10 @@
 
 ## How to add your logo
 
-    Go into the  'images' folder and set your image in there with the name 'logo.svg'.
-    If your image is an .svg file. Then convert it to a .js file using the current 'logo.js' as a guide.
+    Go into the  'images' folder and set your image in there 
+    with the name 'logo.svg'.
+    If your image is an .svg file. 
+    Then convert it to a .js file using the current 'logo.js' as a guide.
 
 ## How to build and run for production
 
